@@ -1,83 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF5722"
+    android:background="@drawable/login_background"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".MainActivity"
     android:paddingStart="25dp"
     android:paddingEnd="25dp"
-    android:paddingTop="100dp">
-
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/logo" />
-
-    <androidx.appcompat.widget.AppCompatEditText
+    android:paddingTop="25dp">
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="username" />
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="120dp">
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="password"
-    /
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:context=".MainActivity"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:paddingTop="100dp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/mew"
+                tools:layout_editor_absoluteX="4dp"
+                tools:layout_editor_absoluteY="3dp" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/username"
+                android:layout_margin="10dp"/>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:layout_margin="10dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/button_login_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:layout_margin="10dp"
+                android:textColor="#EDEAEA"/>
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="@string/forget_passeord"
+                android:layout_margin="10dp"
+                android:textColor="#66ffffff"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="30dp"
+                >
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="3dp"
+                    android:background="#03DAC5"
+                    />
+                <TextView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:text="@string/or"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="3dp"
+                    android:background="#03DAC5"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="login" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_facebook"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button_circle_background"/>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="forget Password" />
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingTop="30dp">
-        <view
-            android:layout_width="100dp"
-            android:layout_height="3dp"
-            android:background="#2196F3"/>
-        <TextView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:text="or"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
-        <view
-            android:layout_width="100dp"
-            android:layout_height="1dp"
-            android:background="#2196F3"/>
-    </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_google"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button_circle_background"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_facebook" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_google" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
